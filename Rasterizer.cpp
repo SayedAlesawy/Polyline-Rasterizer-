@@ -37,23 +37,23 @@ void Rasterizer::RasterizeLine(int x0, int y0, int x1, int y1)
 	if (m < 1) {
 		p = 2 * dy - dx, inc1 = 2 * dy, inc2 = 2 * dy - 2 * dx;
 		
-		m_Image[x0][y0] = 1;
+		m_Image[y0][x0] = 1;
 
 		while (x0 != x1) {
 			if (p < 0) x0 += xstep, p += inc1;
 			else x0 += xstep, y0 += ystep, p += inc2;
-			m_Image[x0][y0] = 1;
+			m_Image[y0][x0] = 1;
 		}
 	}
 	else {
 		p = 2 * dx - dy, inc1 = 2 * dx, inc2 = 2 * dx - 2 * dy;
 		
-		m_Image[x0][y0] = 1;
+		m_Image[y0][x0] = 1;
 
 		while (y0 != y1) {
 			if (p < 0) y0 += ystep, p += inc1;
 			else x0 += xstep, y0 += ystep, p += inc2;
-			m_Image[x0][y0] = 1;
+			m_Image[y0][x0] = 1;
 		}
 	}
 }
