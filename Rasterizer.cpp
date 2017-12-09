@@ -1,6 +1,6 @@
 #include"Rasterizer.h"
 
-Rasterizer::Rasterizer(int xmin, int ymin, int xmax, int ymax, int xres, int yres)
+Rasterizer::Rasterizer(double xmin, double ymin, double xmax, double ymax, int xres, int yres)
 {
 	Xmin = xmin; Ymin = ymin; Xmax = xmax; Ymax = ymax; Xres = xres; Yres = yres;
 	m_Image.resize(Xres);

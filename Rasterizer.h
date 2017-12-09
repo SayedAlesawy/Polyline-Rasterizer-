@@ -9,7 +9,7 @@ using namespace std;
 class Rasterizer
 {
 	private:
-		int Xmin, Xmax, Ymin, Ymax, Xres, Yres; 
+		double Xmin, Xmax, Ymin, Ymax; int Xres, Yres;
 		vector<Color>m_FinalOutput;
 		vector<pair<long double, long double>> m_InputPolyline;
 		vector<pair<long double, long double>> m_ConvertedPolyline;
@@ -18,7 +18,7 @@ class Rasterizer
 		void RasterizeLine(int x0, int y0, int x1, int x2);
 		
 	public:
-		Rasterizer(int xmin, int ymin, int xmax, int ymax, int xres, int yres);
+		Rasterizer(double xmin, double ymin, double xmax, double ymax, int xres, int yres);
 		void RasterizePolyline();
 		void SetPolyline(vector<pair<long double, long double>> InputPolyline);
 		void ColorizePolyline();

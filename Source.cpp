@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 	reader.ParseFile(IOFile + ".2d");
 	vector<vector<pair<long double, long double>>> Polylines = reader.GetPloylines();
 
-	int params[6];
+	double params[6];
 	for (int i = 1; i < argc; i++) {
 		stringstream ss(argv[i]);
 		ss >> params[i - 1];
